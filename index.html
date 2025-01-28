@@ -4,9 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil Undertale</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Fonte do Undertale -->
-    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <style>
+        /* Estilo Undertale - Fonte e cores */
+        body {
+            font-family: 'Press Start 2P', monospace;
+            background-color: #000000; /* Fundo preto */
+            color: #FFFFFF; /* Texto branco */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            width: 90%;
+            max-width: 500px;
+            border: 3px solid #FFFFFF; /* Borda branca */
+            border-radius: 10px;
+            padding: 20px;
+            background-color: #000000; /* Fundo preto */
+        }
+
+        .profile-pic img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border: 5px solid #FFFFFF; /* Borda branca */
+        }
+
+        .profile-info h1 {
+            color: #FF6347; /* Título em vermelho */
+            font-size: 2.5rem;
+        }
+
+        .profile-info p {
+            font-size: 1.1rem;
+            color: #D3D3D3; /* Texto em cinza claro */
+        }
+
+        .links ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .links ul li {
+            margin: 10px 0;
+        }
+
+        .links a {
+            color: #FF6347; /* Cor dos links em vermelho */
+            text-decoration: none;
+            font-size: 1.3rem;
+            border-bottom: 2px solid #FF6347; /* Linha vermelha embaixo dos links */
+            transition: color 0.3s;
+        }
+
+        .links a:hover {
+            color: #FFFFFF;
+        }
+
+        .copyright p {
+            font-size: 0.9rem;
+            color: #D3D3D3; /* Texto em cinza claro */
+            margin-top: 20px;
+        }
+
+        /* Fonte Pixelada */
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+    </style>
 </head>
 <body>
     <div class="container">
@@ -18,7 +87,7 @@
         <!-- Nome e Descrição -->
         <div class="profile-info">
             <h1>xpbaut</h1> <!-- Troque "Seu Nome" -->
-            <p>Uma breve descrição sobre você, seu interesse no universo Undertale, ou qualquer coisa legal que você queira compartilhar!</p> <!-- Troque a descrição -->
+            <p>Uma breve descrição sobre você, seus interesses ou algo que você gostaria de compartilhar.</p> <!-- Troque a descrição -->
         </div>
 
         <!-- Links -->
