@@ -1,8 +1,8 @@
 /* Estilo Undertale - Fonte e cores */
 body {
-    font-family: 'VT323', monospace;
-    background-color: #121212; /* Fundo escuro */
-    color: #FFFFFF;
+    font-family: 'Press Start 2P', monospace;
+    background-color: #000000; /* Fundo preto */
+    color: #FFFFFF; /* Texto branco */
     margin: 0;
     padding: 0;
     display: flex;
@@ -15,10 +15,10 @@ body {
     text-align: center;
     width: 90%;
     max-width: 500px;
-    border: 3px solid #FF6347; /* Cor vermelha típica de Undertale */
-    border-radius: 15px;
+    border: 3px solid #FFFFFF; /* Borda branca */
+    border-radius: 10px;
     padding: 20px;
-    background-color: #000000;
+    background-color: #000000; /* Fundo preto */
 }
 
 .profile-pic img {
@@ -26,19 +26,17 @@ body {
     width: 150px;
     height: 150px;
     object-fit: cover;
-    border: 5px solid #FF6347; /* Borda vermelha */
+    border: 5px solid #FFFFFF; /* Borda branca */
 }
 
 .profile-info h1 {
     color: #FF6347; /* Título em vermelho */
     font-size: 2.5rem;
-    text-shadow: 2px 2px 5px rgba(255, 99, 71, 0.7);
 }
 
 .profile-info p {
     font-size: 1.1rem;
     color: #D3D3D3; /* Texto em cinza claro */
-    text-shadow: 1px 1px 3px rgba(255, 99, 71, 0.5);
 }
 
 .links ul {
@@ -55,17 +53,15 @@ body {
     text-decoration: none;
     font-size: 1.3rem;
     border-bottom: 2px solid #FF6347; /* Linha vermelha embaixo dos links */
-    transition: color 0.3s, text-shadow 0.3s;
+    transition: color 0.3s;
 }
 
 .links a:hover {
     color: #FFFFFF;
-    text-shadow: 2px 2px 5px rgba(255, 99, 71, 1);
 }
 
 .copyright p {
     font-size: 0.9rem;
-    color: #FF6347;
+    color: #D3D3D3; /* Texto em cinza claro */
     margin-top: 20px;
-    text-shadow: 1px 1px 3px rgba(255, 99, 71, 0.7);
 }
