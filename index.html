@@ -8,7 +8,7 @@
     <style>
         body {
             font-family: 'Samsung Sans', sans-serif;
-            background-color: #181818; /* Fundo escuro */
+            background-color: #121212; /* Fundo preto, mais próximo do estilo One UI */
             color: #e0e0e0;
             margin: 0;
             padding: 0;
@@ -40,24 +40,36 @@
             color: #b0b0b0;
         }
         .section {
-            background-color: #2b2b2b; /* Fundo cinza suave das seções */
-            margin-top: 30px;
+            background-color: #2b2b2b; /* Fundo cinza das caixas */
+            margin-top: 20px;
             padding: 20px;
             border-radius: 12px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            width: 80%; /* Ajustando o tamanho da seção */
+            margin-left: auto;
+            margin-right: auto;
         }
         .social-links {
             list-style: none;
             padding: 0;
+            margin: 0;
         }
         .social-links li {
-            display: inline-block;
-            margin: 10px;
+            display: block; /* Links dispostos verticalmente */
+            margin: 15px 0;
+            padding: 15px;
+            background-color: #3a3a3a; /* Caixa cinza para cada link */
+            border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+        .social-links li:hover {
+            background-color: #4a90e2; /* Efeito de hover */
         }
         .social-links a {
             text-decoration: none;
-            color: #4a90e2; /* Azul suave para os links */
-            font-size: 20px;
+            color: #e0e0e0;
+            font-size: 18px;
+            display: block;
         }
         footer {
             margin-top: 50px;
@@ -77,7 +89,7 @@
         "I don't have time for this."
     </div>
 
-    <!-- Seção de Links com Fundo Cinza -->
+    <!-- Seção de Links com Fundo Cinza e Layout Vertical -->
     <section class="section">
         <h2>Me encontre em:</h2>
         <ul class="social-links">
