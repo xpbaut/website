@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil Undertale</title>
+    <title>Perfil Deltarune</title>
     <style>
-        /* Importação da Fonte Pixelada */
+        /* Fonte Pixelada Inspirada em Deltarune */
         @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
-        /* Estilo Undertale - Fonte e cores */
+        /* Estilo Principal */
         body {
             font-family: 'Press Start 2P', monospace;
-            background-color: #000000; /* Fundo preto */
-            color: #FFFFFF; /* Texto branco */
+            background-color: #1e1e1e; /* Fundo escuro */
+            color: #ffffff; /* Texto branco */
             margin: 0;
             padding: 0;
             display: flex;
@@ -21,37 +21,48 @@
             height: 100vh;
         }
 
+        /* Container Centralizado */
         .container {
             text-align: center;
             width: 90%;
             max-width: 500px;
-            border: 3px solid #FFFFFF; /* Borda branca */
-            border-radius: 10px;
             padding: 20px;
-            background-color: #000000; /* Fundo preto */
+            background-color: #2e2e2e; /* Fundo mais claro para destacar o conteúdo */
+            border: 5px solid #8a00d4; /* Bordas roxas */
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(138, 0, 212, 0.5); /* Sombra roxa */
         }
 
+        /* Foto de Perfil */
         .profile-pic img {
             border-radius: 50%;
             width: 150px;
             height: 150px;
             object-fit: cover;
-            border: 5px solid #FFFFFF; /* Borda branca */
+            border: 5px solid #8a00d4; /* Borda roxa ao redor da imagem */
         }
 
+        /* Título (Nome) */
         .profile-info h1 {
-            color: #FF6347; /* Título em vermelho */
-            font-size: 2.5rem;
+            color: #8a00d4; /* Título em roxo */
+            font-size: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            margin-top: 20px;
         }
 
+        /* Descrição */
         .profile-info p {
             font-size: 1.1rem;
-            color: #D3D3D3; /* Texto em cinza claro */
+            color: #b0b0b0; /* Descrição em cinza claro */
+            margin-top: 10px;
         }
 
+        /* Links */
         .links ul {
             list-style: none;
             padding: 0;
+            margin-top: 20px;
         }
 
         .links ul li {
@@ -59,23 +70,27 @@
         }
 
         .links a {
-            color: #FF6347; /* Cor dos links em vermelho */
+            color: #8a00d4; /* Links roxos */
             text-decoration: none;
-            font-size: 1.3rem;
-            border-bottom: 2px solid #FF6347; /* Linha vermelha embaixo dos links */
-            transition: color 0.3s;
+            font-size: 1.5rem;
+            padding: 5px 10px;
+            border: 2px solid transparent;
+            border-radius: 5px;
+            transition: all 0.3s ease;
         }
 
         .links a:hover {
-            color: #FFFFFF;
+            color: #ffffff;
+            background-color: #8a00d4;
+            border-color: #ffffff; /* Efeito no hover */
         }
 
+        /* Copyright */
         .copyright p {
             font-size: 0.9rem;
-            color: #D3D3D3; /* Texto em cinza claro */
+            color: #b0b0b0;
             margin-top: 20px;
         }
-
     </style>
 </head>
 <body>
