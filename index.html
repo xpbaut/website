@@ -5,68 +5,107 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sobre Mim</title>
   <style>
+    /* Estilo da página */
     body {
-      font-family: Arial, sans-serif;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      background-color: #f3f3f3;
+      color: #333;
       margin: 0;
       padding: 0;
-      background: linear-gradient(135deg, #74ebd5, #acb6e5);
-      color: #333;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
     }
+
+    /* Área principal */
+    .container {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background: #fff;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Cabeçalho */
     header {
+      background-color: #0078d4;
+      color: white;
+      padding: 15px;
       text-align: center;
-      margin-bottom: 20px;
+      border-radius: 5px;
     }
     header h1 {
-      font-size: 2.5em;
       margin: 0;
-      color: #fff;
+      font-size: 2.5em;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
     }
     header p {
-      font-size: 1.2em;
-      color: #f5f5f5;
+      font-size: 1em;
+      margin: 5px 0 0;
     }
-    nav {
+
+    /* Caixa de informações */
+    .info {
       margin-top: 20px;
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f9f9f9;
     }
-    nav a {
+    .info h2 {
+      margin-top: 0;
+      color: #0078d4;
+      font-size: 1.5em;
+    }
+
+    /* Links */
+    .links {
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+    .links a {
       text-decoration: none;
-      margin: 0 10px;
-      padding: 10px 20px;
-      background-color: #fff;
-      color: #333;
+      color: white;
+      background-color: #0078d4;
+      padding: 10px 15px;
       border-radius: 5px;
       font-weight: bold;
-      transition: background-color 0.3s, color 0.3s;
+      transition: background-color 0.3s ease;
     }
-    nav a:hover {
-      background-color: #333;
-      color: #fff;
+    .links a:hover {
+      background-color: #005bb5;
     }
+
+    /* Rodapé */
     footer {
       margin-top: 30px;
-      color: #fff;
+      text-align: center;
       font-size: 0.9em;
+      color: #666;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Olá, eu sou xpbaut</h1>
-    <p>Bem-vindo ao meu site! Aqui você pode saber mais sobre mim e acessar minhas redes.</p>
-  </header>
-  <nav>
-    <a href="https://link1.com" target="_blank">Link 1</a>
-    <a href="https://link2.com" target="_blank">Link 2</a>
-    <a href="https://link3.com" target="_blank">Link 3</a>
-    <a href="https://link4.com" target="_blank">Link 4</a>
-  </nav>
-  <footer>
-    <p>© 2025 xpbaut. Todos os direitos reservados.</p>
-  </footer>
+  <div class="container">
+    <header>
+      <h1>Bem-vindo ao meu perfil!</h1>
+      <p>Aprenda mais sobre mim e explore meus links favoritos.</p>
+    </header>
+    <div class="info">
+      <h2>Sobre Mim</h2>
+      <p>Olá, eu sou [Seu Nome]! Adoro explorar novas ideias e compartilhar coisas incríveis. Esse espaço é onde você pode me conhecer melhor.</p>
+    </div>
+    <div class="links">
+      <a href="https://link1.com" target="_blank">Meu Blog</a>
+      <a href="https://link2.com" target="_blank">Meu Portfólio</a>
+      <a href="https://link3.com" target="_blank">Minha Rede Social</a>
+      <a href="https://link4.com" target="_blank">Contato</a>
+    </div>
+    <footer>
+      <p>© 2025 [Seu Nome]. Feito com <3 inspirado no SpaceHey.</p>
+    </footer>
+  </div>
 </body>
 </html>
