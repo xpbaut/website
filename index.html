@@ -8,86 +8,94 @@
     <style>
         /* Fonte e estilos globais */
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-            background-color: #121212; /* Fundo escuro */
-            color: #e0e0e0; /* Texto claro */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            text-align: center;
+            background-color: #f8f8f8; /* Cor de fundo clara */
+            color: #333; /* Texto escuro */
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            overflow: hidden;
+            min-height: 100vh;
+            box-sizing: border-box;
         }
 
-        /* Header de perfil */
+        /* Header do perfil */
         .header {
+            width: 100%;
+            background-color: #ffffff; /* Fundo branco */
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 20px;
+            margin: 20px;
             display: flex;
             flex-direction: column;
-            align-items: center;
             justify-content: center;
-            padding: 40px;
-            width: 100%;
-            background: rgba(0, 0, 0, 0.6); /* Fundo escuro com transparência */
-            backdrop-filter: blur(10px); /* Efeito de blur */
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            border-bottom: 2px solid #333;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        /* Efeito de hover no header */
+        .header:hover {
+            transform: translateY(-10px); /* Efeito de "elevação" ao passar o mouse */
         }
 
         /* Imagem de Perfil */
         .profile-img {
-            width: 150px;
-            height: 150px;
+            width: 120px;
+            height: 120px;
             border-radius: 50%;
-            border: 4px solid #ffffff;
             margin-bottom: 20px;
+            border: 4px solid #0078d4; /* Cor suave ao redor da foto */
             transition: transform 0.3s ease;
         }
 
+        /* Efeito de hover na imagem */
         .profile-img:hover {
-            transform: scale(1.1); /* Efeito de zoom quando passar o mouse */
+            transform: scale(1.1);
         }
 
         /* Nome e descrição */
         .profile-info {
-            text-align: center;
-            color: #ffffff;
+            margin-bottom: 30px;
         }
 
         h1 {
-            font-size: 36px;
+            font-size: 28px;
             margin: 10px 0;
             font-weight: 600;
+            color: #0078d4; /* Cor do nome */
         }
 
         p {
-            font-size: 18px;
-            color: #cccccc;
-            margin-top: 10px;
+            font-size: 16px;
+            color: #555;
+            margin-top: 5px;
         }
 
         /* Links sociais */
         .social-links {
-            margin-top: 30px;
             display: flex;
             gap: 20px;
+            justify-content: center;
+            margin-top: 30px;
         }
 
         .social-links a {
             text-decoration: none;
-            color: #6200ea; /* Cor suave, similar ao tema Apple */
-            font-size: 20px;
-            padding: 12px 24px;
+            color: #0078d4;
+            font-size: 18px;
+            padding: 10px 20px;
             border: 2px solid transparent;
             border-radius: 30px;
-            background-color: #3f3f3f;
+            background-color: #ffffff;
             transition: all 0.3s ease;
         }
 
         .social-links a:hover {
-            background-color: #6200ea;
+            background-color: #0078d4;
             color: #ffffff;
             transform: scale(1.05); /* Animação de aumento */
         }
@@ -95,20 +103,21 @@
         /* Responsividade */
         @media (max-width: 600px) {
             .profile-img {
-                width: 120px;
-                height: 120px;
+                width: 100px;
+                height: 100px;
             }
 
             h1 {
-                font-size: 28px;
+                font-size: 24px;
             }
 
             p {
-                font-size: 16px;
+                font-size: 14px;
             }
 
             .social-links {
                 flex-direction: column;
+                gap: 15px;
             }
         }
     </style>
@@ -119,17 +128,17 @@
         <!-- Imagem de Perfil -->
         <img src="insira a foto aqui" alt="Minha Foto" class="profile-img">
 
-        <!-- Informações do Perfil -->
+        <!-- Nome e Descrição -->
         <div class="profile-info">
             <h1>Seu Nome</h1>
-            <p>Desenvolvedor, Criador e Entusiasta de Tecnologia.</p>
+            <p>Desenvolvedor Criativo e Apaixonado por Tecnologia</p>
         </div>
 
-        <!-- Links sociais -->
+        <!-- Links Sociais -->
         <div class="social-links">
-            <a href="https://www.example.com" target="_blank">LinkedIn</a>
-            <a href="https://www.example.com" target="_blank">GitHub</a>
-            <a href="https://www.example.com" target="_blank">Twitter</a>
+            <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+            <a href="https://www.github.com" target="_blank">GitHub</a>
+            <a href="https://www.twitter.com" target="_blank">Twitter</a>
         </div>
     </div>
 
