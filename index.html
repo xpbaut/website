@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minha Bio</title>
 
-    <!-- Usando uma fonte similar à San Francisco -->
     <style>
+        /* Fonte e estilos globais */
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-            background-color: #121212; /* Modo escuro */
+            background-color: #121212; /* Fundo escuro */
             color: #e0e0e0; /* Texto claro */
             margin: 0;
             padding: 0;
@@ -19,100 +19,119 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
+            overflow: hidden;
         }
 
-        header {
-            font-size: 36px;
-            color: #ffffff;
-            margin-top: 20px;
+        /* Header de perfil */
+        .header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.6); /* Fundo escuro com transparência */
+            backdrop-filter: blur(10px); /* Efeito de blur */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            border-bottom: 2px solid #333;
         }
 
-        .profile-container {
-            width: 90%;
-            max-width: 500px;
-            margin-top: 30px;
-            background-color: #1e1e1e;
-            border-radius: 12px;
-            padding: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
+        /* Imagem de Perfil */
         .profile-img {
             width: 150px;
             height: 150px;
             border-radius: 50%;
-            border: 3px solid #ffffff;
+            border: 4px solid #ffffff;
             margin-bottom: 20px;
+            transition: transform 0.3s ease;
         }
 
-        h2 {
-            font-size: 28px;
+        .profile-img:hover {
+            transform: scale(1.1); /* Efeito de zoom quando passar o mouse */
+        }
+
+        /* Nome e descrição */
+        .profile-info {
+            text-align: center;
             color: #ffffff;
+        }
+
+        h1 {
+            font-size: 36px;
             margin: 10px 0;
+            font-weight: 600;
         }
 
         p {
             font-size: 18px;
             color: #cccccc;
-            margin-bottom: 20px;
+            margin-top: 10px;
         }
 
-        .links {
-            margin-top: 20px;
+        /* Links sociais */
+        .social-links {
+            margin-top: 30px;
+            display: flex;
+            gap: 20px;
         }
 
-        .links a {
+        .social-links a {
             text-decoration: none;
-            color: #6200ea; /* Cor suave */
-            font-size: 18px;
-            padding: 10px 20px;
+            color: #6200ea; /* Cor suave, similar ao tema Apple */
+            font-size: 20px;
+            padding: 12px 24px;
             border: 2px solid transparent;
-            border-radius: 20px;
+            border-radius: 30px;
             background-color: #3f3f3f;
             transition: all 0.3s ease;
         }
 
-        .links a:hover {
+        .social-links a:hover {
             background-color: #6200ea;
             color: #ffffff;
-            transform: scale(1.05);
-        }
-
-        footer {
-            font-size: 14px;
-            color: #cccccc;
-            margin-top: 50px;
+            transform: scale(1.05); /* Animação de aumento */
         }
 
         /* Responsividade */
         @media (max-width: 600px) {
-            .profile-container {
-                width: 80%;
+            .profile-img {
+                width: 120px;
+                height: 120px;
             }
 
-            header {
+            h1 {
                 font-size: 28px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+            .social-links {
+                flex-direction: column;
             }
         }
     </style>
 </head>
 <body>
 
-    <header>Minha Bio</header>
-
-    <div class="profile-container">
+    <div class="header">
+        <!-- Imagem de Perfil -->
         <img src="insira a foto aqui" alt="Minha Foto" class="profile-img">
-        <h2>[Seu Nome]</h2>
-        <p>Desenvolvedor, criador e entusiasta de tecnologia.</p>
 
-        <div class="links">
-            <a href="https://www.example.com" target="_blank">Link 1</a>
-            <a href="https://www.example.com" target="_blank">Link 2</a>
-            <a href="https://www.example.com" target="_blank">Link 3</a>
+        <!-- Informações do Perfil -->
+        <div class="profile-info">
+            <h1>Seu Nome</h1>
+            <p>Desenvolvedor, Criador e Entusiasta de Tecnologia.</p>
+        </div>
+
+        <!-- Links sociais -->
+        <div class="social-links">
+            <a href="https://www.example.com" target="_blank">LinkedIn</a>
+            <a href="https://www.example.com" target="_blank">GitHub</a>
+            <a href="https://www.example.com" target="_blank">Twitter</a>
         </div>
     </div>
-
-    <footer>&copy; 2025 [Seu Nome]. Todos os direitos reservados.</footer>
 
 </body>
 </html>
