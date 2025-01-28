@@ -32,7 +32,7 @@
             align-items: center;
             justify-content: center;
             min-height: 100vh;
-            width: 100%; /* Garantindo que o corpo ocupe toda a largura */
+            width: 100%;
             transition: background-color 0.3s ease, color 0.3s ease;
         }
 
@@ -51,7 +51,7 @@
         /* Caixa de Perfil */
         .profile-header {
             width: 100%;
-            max-width: 100%; /* Remover o limite de largura */
+            max-width: 100%;
             background-color: var(--border);
             border-radius: 15px;
             padding: 50px 20px;
@@ -66,7 +66,7 @@
         }
 
         .profile-header:hover {
-            transform: translateY(-10px); /* Efeito de "elevação" ao passar o mouse */
+            transform: translateY(-10px);
         }
 
         /* Imagem de Perfil */
@@ -89,7 +89,7 @@
             gap: 20px;
             justify-content: center;
             margin-top: 30px;
-            flex-wrap: wrap; /* Permite que os links se ajustem se não caberem */
+            flex-wrap: wrap;
         }
 
         .social-links a {
@@ -106,7 +106,7 @@
         .social-links a:hover {
             background-color: var(--highlight);
             color: #fff;
-            transform: scale(1.05); /* Animação de aumento */
+            transform: scale(1.05);
         }
 
         /* Responsividade */
@@ -129,6 +129,20 @@
                 gap: 15px;
             }
         }
+
+        /* Rodapé */
+        footer {
+            width: 100%;
+            background-color: var(--border);
+            color: var(--primary);
+            text-align: center;
+            padding: 20px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            font-size: 1rem;
+            box-sizing: border-box;
+        }
     </style>
 </head>
 <body>
@@ -139,8 +153,8 @@
 
         <!-- Nome e Descrição -->
         <div class="profile-info">
-            <h1>Seu Nome</h1>
-            <p>Desenvolvedor Criativo e Apaixonado por Tecnologia</p>
+            <h1>xpbaut</h1>
+            <p>Imagina ser tão atoa ao ponto de criar um site</p>
         </div>
 
         <!-- Links Sociais -->
@@ -150,6 +164,11 @@
             <a href="https://www.twitter.com" target="_blank">Twitter</a>
         </div>
     </div>
+
+    <!-- Rodapé com Copyright -->
+    <footer>
+        &copy; 2025 xpbaut. Todos os direitos reservados.
+    </footer>
 
 </body>
 </html>
