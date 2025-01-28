@@ -9,15 +9,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Google+Sans&display=swap" rel="stylesheet">
 
     <style>
-        /* Definindo as cores do tema Catppuccin Mocha */
+        /* Definindo as cores do tema Catppuccin Latte */
         :root {
-            --bg: #1e1e2e; /* fundo escuro */
-            --fg: #d9e0ee; /* texto claro */
-            --primary: #f5e0dc; /* principal */
-            --accent: #f2cdcd; /* destaque suave */
-            --highlight: #f5a97f; /* destaque */
-            --border: #33303d; /* borda sutil */
-            --shadow: rgba(0, 0, 0, 0.4); /* sombra suave */
+            --bg: #eff1f5; /* Fundo claro */
+            --fg: #4c4f69; /* Texto escuro */
+            --primary: #dce0e8; /* Principal */
+            --accent: #a6adc8; /* Destaque suave */
+            --highlight: #d20f39; /* Destaque */
+            --border: #ccd0da; /* Borda sutil */
+            --shadow: rgba(0, 0, 0, 0.2); /* Sombra suave */
         }
 
         /* Estilos globais */
@@ -34,39 +34,35 @@
             min-height: 100vh;
             width: 100%;
             transition: background-color 0.3s ease, color 0.3s ease;
-            background: linear-gradient(145deg, #2b2e3b, #3d4754);
+            background: linear-gradient(145deg, #e6e9ef, #f5f7fa);
         }
 
         h1 {
             font-size: 2.5rem;
             color: var(--highlight);
             margin: 10px 0;
-            text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
         }
 
         p {
             font-size: 1.2rem;
             margin: 5px 0;
-            color: var(--primary);
+            color: var(--fg);
         }
 
         /* Caixa de Perfil */
         .profile-header {
-            background-image: url('https://github.com/xpbaut/website/blob/c6aab93f5a598fe5d2e209f3281a0de5fa4b163f/coisas/cc5fa46345dfd2d368ff353dc5f44d20.jpg'); /* Imagem de fundo */
-            background-size: cover;
-            background-position: center;
-            position: relative;
-            padding: 50px 20px;
-            border-radius: 25px;
-            box-shadow: 0 10px 30px var(--shadow);
-            overflow: hidden; /* Garante que o conteúdo não ultrapasse os limites do card */
             width: 90%;
             max-width: 550px; /* Ajustando para ficar bem encaixado */
+            background-color: var(--border);
+            border-radius: 25px;
+            padding: 50px 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             text-align: center;
+            box-shadow: 0 10px 30px var(--shadow);
             margin-bottom: 40px;
             box-sizing: border-box;
             transition: transform 0.3s ease;
@@ -75,19 +71,6 @@
 
         .profile-header:hover {
             transform: scale(1.05);
-        }
-
-        .profile-header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.4); /* Escurece um pouco para melhorar contraste */
-            filter: blur(10px); /* Aplica o desfoque na imagem */
-            z-index: -1; /* Coloca a camada de blur atrás do conteúdo */
-            border-radius: 25px; /* Faz o efeito de blur seguir os limites arredondados */
         }
 
         /* Imagem de Perfil */
@@ -137,7 +120,7 @@
             margin-top: 40px;
             text-align: center;
             font-size: 1rem;
-            color: var(--primary);
+            color: var(--fg);
             border-top: 2px solid var(--highlight);
             padding-top: 20px;
             width: 100%;
@@ -178,26 +161,26 @@
 
     <div class="profile-header">
         <!-- Imagem de Perfil -->
-        <img src="insira a foto aqui" alt="Minha Foto" class="profile-img">
+        <img src="https://github.com/xpbaut/website/blob/7c0db6b6f6b81bc7012491f8f810e26fbd00a8dd/coisas/Picsart_25-01-28_09-23-09-830.jpg" alt="Minha Foto" class="profile-img">
 
         <!-- Nome e Descrição -->
         <div class="profile-info">
-            <h1>Seu Nome</h1>
-            <p>Desenvolvedor Criativo e Apaixonado por Tecnologia</p>
+            <h1>xpbaut</h1>
+            <p>Imagina criar um site sem saber criar um...</p>
         </div>
 
         <!-- Links Sociais -->
         <div class="social-links">
-            <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
-            <a href="https://www.github.com" target="_blank">GitHub</a>
-            <a href="https://www.twitter.com" target="_blank">Twitter</a>
-            <a href="https://www.instagram.com" target="_blank">Instagram</a> <!-- Novo Link -->
+            <a href="https://anilist.co/user/xpbaut/" target="_blank">AniList</a>
+            <a href="https://www.backloggd.com/u/xpbaut/" target="_blank">Backloggd</a>
+            <a href="https://github.com/xpbaut/" target="_blank">GitHub</a>
+            <a href="https://www.instagram.com" target="_blank">Mastodon</a> <!-- Novo Link -->
         </div>
     </div>
 
     <!-- Rodapé com Copyright -->
     <footer>
-        <p>&copy; 2025 Seu Nome. Todos os direitos reservados.</p>
+        <p>&copy; 2025 xpbaut. Todos os direitos reservados.</p>
     </footer>
 
 </body>
