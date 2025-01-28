@@ -18,8 +18,6 @@
             --highlight: #f5a97f; /* destaque */
             --border: #33303d; /* borda sutil */
             --shadow: rgba(0, 0, 0, 0.4); /* sombra suave */
-            --highlight-dark: #f1b28d; /* Destaque mais escuro */
-            --footer-bg: #27272f; /* Fundo do rodapé */
         }
 
         /* Estilos globais */
@@ -34,3 +32,156 @@
             align-items: center;
             justify-content: center;
             min-height: 100vh;
+            width: 100%;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            background: linear-gradient(145deg, #2b2e3b, #3d4754);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--highlight);
+            margin: 10px 0;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin: 5px 0;
+            color: var(--primary);
+        }
+
+        /* Caixa de Perfil */
+        .profile-header {
+            width: 90%;
+            max-width: 550px; /* Ajustando para ficar bem encaixado */
+            background-color: var(--border);
+            border-radius: 25px;
+            padding: 50px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            box-shadow: 0 10px 30px var(--shadow);
+            margin-bottom: 40px;
+            box-sizing: border-box;
+            transition: transform 0.3s ease;
+            margin-right: 0; /* Garantir que não sobre espaço à direita */
+        }
+
+        .profile-header:hover {
+            transform: scale(1.05);
+        }
+
+        /* Imagem de Perfil */
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            border: 6px solid var(--highlight);
+            box-shadow: 0 0 10px var(--highlight);
+            transition: transform 0.3s ease, border 0.3s ease;
+        }
+
+        .profile-img:hover {
+            transform: scale(1.1);
+            border-color: var(--accent);
+        }
+
+        /* Links Sociais */
+        .social-links {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .social-links a {
+            text-decoration: none;
+            color: var(--highlight);
+            font-size: 1.2rem;
+            padding: 12px 25px;
+            border: 2px solid var(--highlight);
+            border-radius: 30px;
+            background-color: transparent;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background-color: var(--highlight);
+            color: #fff;
+            transform: scale(1.05);
+        }
+
+        /* Rodapé com Copyright */
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 1rem;
+            color: var(--primary);
+            border-top: 2px solid var(--highlight);
+            padding-top: 20px;
+            width: 100%;
+        }
+
+        footer a {
+            text-decoration: none;
+            color: var(--highlight);
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsividade */
+        @media (max-width: 600px) {
+            .profile-img {
+                width: 100px;
+                height: 100px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            .social-links {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="profile-header">
+        <!-- Imagem de Perfil -->
+        <img src="insira a foto aqui" alt="Minha Foto" class="profile-img">
+
+        <!-- Nome e Descrição -->
+        <div class="profile-info">
+            <h1>Seu Nome</h1>
+            <p>Desenvolvedor Criativo e Apaixonado por Tecnologia</p>
+        </div>
+
+        <!-- Links Sociais -->
+        <div class="social-links">
+            <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+            <a href="https://www.github.com" target="_blank">GitHub</a>
+            <a href="https://www.twitter.com" target="_blank">Twitter</a>
+            <a href="https://www.instagram.com" target="_blank">Instagram</a> <!-- Novo Link -->
+        </div>
+    </div>
+
+    <!-- Rodapé com Copyright -->
+    <footer>
+        <p>&copy; 2025 Seu Nome. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
