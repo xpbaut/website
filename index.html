@@ -3,26 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minha Bio</title>
+    <title>Minha Bio - Emo 2000</title>
 
-    <!-- Importando a fonte Google Sans -->
-    <link href="https://fonts.googleapis.com/css2?family=Google+Sans&display=swap" rel="stylesheet">
+    <!-- Importando fontes mais agressivas e típicas -->
+    <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
 
     <style>
-        /* Definindo as cores do tema Catppuccin Mocha */
+        /* Cores escuras e de alto contraste */
         :root {
-            --bg: #1e1e2e; /* fundo escuro */
-            --fg: #d9e0ee; /* texto claro */
-            --primary: #f5e0dc; /* principal */
-            --accent: #f2cdcd; /* destaque suave */
-            --highlight: #f5a97f; /* destaque */
-            --border: #33303d; /* borda sutil */
-            --shadow: rgba(0, 0, 0, 0.4); /* sombra suave */
+            --bg: #1d1d1d; /* fundo preto escuro */
+            --fg: #b0b0b0; /* texto claro, quase cinza */
+            --highlight: #ff4f5e; /* cor de destaque vermelho */
+            --border: #333; /* borda escura */
+            --accent: #ff2a68; /* tom de rosa para acentuar */
+            --shadow: rgba(0, 0, 0, 0.6); /* sombra suave */
         }
 
         /* Estilos globais */
         body {
-            font-family: 'Google Sans', sans-serif;
+            font-family: 'Rock Salt', cursive, sans-serif;
             margin: 0;
             padding: 0;
             background-color: var(--bg);
@@ -33,49 +33,31 @@
             justify-content: center;
             min-height: 100vh;
             width: 100%;
-            transition: background-color 0.3s ease, color 0.3s ease;
+            overflow-x: hidden;
+            transition: all 0.3s ease;
         }
 
-        h1 {
-            font-size: 2.5rem;
-            color: var(--highlight);
-            margin: 10px 0;
-        }
-
-        p {
-            font-size: 1.2rem;
-            margin: 5px 0;
-            color: var(--primary);
-        }
-
-        /* Caixa de Perfil */
+        /* Cabeçalho e nome de perfil */
         .profile-header {
-            width: 100%;
-            max-width: 100%;
+            width: 90%;
+            max-width: 800px;
             background-color: var(--border);
-            border-radius: 15px;
-            padding: 50px 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+            padding: 50px 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px var(--shadow);
             text-align: center;
-            box-shadow: 0 4px 10px var(--shadow);
+            position: relative;
+            overflow: hidden;
             margin-bottom: 40px;
-            box-sizing: border-box;
-        }
-
-        .profile-header:hover {
-            transform: translateY(-10px);
         }
 
         /* Imagem de Perfil */
         .profile-img {
-            width: 120px;
-            height: 120px;
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
-            margin-bottom: 20px;
             border: 4px solid var(--highlight);
+            margin-bottom: 20px;
             transition: transform 0.3s ease;
         }
 
@@ -83,91 +65,143 @@
             transform: scale(1.1);
         }
 
-        /* Links Sociais */
+        /* Nome de Perfil */
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3rem;
+            color: var(--highlight);
+            margin: 10px 0;
+            text-shadow: 2px 2px var(--accent);
+        }
+
+        /* Descrição de Perfil */
+        p {
+            font-size: 1.3rem;
+            margin: 10px 0;
+            color: var(--fg);
+            text-shadow: 1px 1px var(--shadow);
+        }
+
+        /* Links sociais */
         .social-links {
             display: flex;
-            gap: 20px;
             justify-content: center;
-            margin-top: 30px;
+            gap: 30px;
+            margin-top: 20px;
             flex-wrap: wrap;
         }
 
         .social-links a {
-            text-decoration: none;
             color: var(--highlight);
-            font-size: 1.2rem;
-            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 1.5rem;
             border: 2px solid var(--highlight);
-            border-radius: 30px;
+            padding: 10px 20px;
+            border-radius: 25px;
             background-color: transparent;
+            position: relative;
+            overflow: hidden;
             transition: all 0.3s ease;
         }
 
-        .social-links a:hover {
+        .social-links a::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             background-color: var(--highlight);
-            color: #fff;
-            transform: scale(1.05);
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.3s ease;
         }
 
-        /* Responsividade */
-        @media (max-width: 600px) {
-            .profile-img {
-                width: 100px;
-                height: 100px;
-            }
+        .social-links a:hover::before {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
 
-            h1 {
-                font-size: 1.8rem;
-            }
-
-            p {
-                font-size: 1rem;
-            }
-
-            .social-links {
-                flex-direction: column;
-                gap: 15px;
-            }
+        .social-links a:hover {
+            color: #fff;
+            box-shadow: 0 4px 10px var(--shadow);
         }
 
         /* Rodapé */
         footer {
             width: 100%;
             background-color: var(--border);
-            color: var(--primary);
+            color: var(--fg);
             text-align: center;
-            padding: 20px;
+            padding: 15px 0;
+            font-size: 1rem;
             position: absolute;
             bottom: 0;
             left: 0;
-            font-size: 1rem;
             box-sizing: border-box;
+            border-top: 2px solid var(--highlight);
+            transition: background-color 0.3s ease;
         }
+
+        footer a {
+            color: var(--highlight);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: var(--accent);
+            text-decoration: underline;
+        }
+
+        /* Responsividade */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .profile-img {
+                width: 120px;
+                height: 120px;
+            }
+
+            .social-links {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            footer {
+                font-size: 0.9rem;
+            }
+        }
+
     </style>
 </head>
 <body>
 
     <div class="profile-header">
         <!-- Imagem de Perfil -->
-        <img src="coisas/Picsart_25-01-28_09-23-09-830.jpg" alt="Minha Foto" class="profile-img">
+        <img src="insira a foto aqui" alt="Minha Foto" class="profile-img">
 
         <!-- Nome e Descrição -->
         <div class="profile-info">
-            <h1>xpbaut</h1>
-            <p>Imagina criar um site por puro tédio...</p>
+            <h1>Seu Nome</h1>
+            <p>Escuro, melancólico, mas cheio de vida</p>
         </div>
 
         <!-- Links Sociais -->
         <div class="social-links">
-            <a href="https://anilist.co/user/xpbaut/" target="_blank">AniList</a>
-            <a href="https://backloggd.com/u/xpbaut" target="_blank">Backloggd</a>
-            <a href="https://github.com/xpbaut/" target="_blank">Github</a>
+            <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+            <a href="https://www.github.com" target="_blank">GitHub</a>
+            <a href="https://www.twitter.com" target="_blank">Twitter</a>
         </div>
     </div>
 
     <!-- Rodapé com Copyright -->
     <footer>
-        &copy; 2025 xpbaut. Todos os direitos reservados.
+        &copy; 2025 Seu Nome. Todos os direitos reservados.
+        <br>
+        <a href="#">Sobre</a> | <a href="#">Contato</a>
     </footer>
 
 </body>
