@@ -52,17 +52,21 @@
 
         /* Caixa de Perfil */
         .profile-header {
+            background-image: url('https://github.com/xpbaut/website/blob/c6aab93f5a598fe5d2e209f3281a0de5fa4b163f/coisas/cc5fa46345dfd2d368ff353dc5f44d20.jpg'); /* Imagem de fundo */
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            padding: 50px 20px;
+            border-radius: 25px;
+            box-shadow: 0 10px 30px var(--shadow);
+            overflow: hidden; /* Garante que o conteúdo não ultrapasse os limites do card */
             width: 90%;
             max-width: 550px; /* Ajustando para ficar bem encaixado */
-            background-color: var(--border);
-            border-radius: 25px;
-            padding: 50px 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             text-align: center;
-            box-shadow: 0 10px 30px var(--shadow);
             margin-bottom: 40px;
             box-sizing: border-box;
             transition: transform 0.3s ease;
@@ -71,6 +75,19 @@
 
         .profile-header:hover {
             transform: scale(1.05);
+        }
+
+        .profile-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4); /* Escurece um pouco para melhorar contraste */
+            filter: blur(10px); /* Aplica o desfoque na imagem */
+            z-index: -1; /* Coloca a camada de blur atrás do conteúdo */
+            border-radius: 25px; /* Faz o efeito de blur seguir os limites arredondados */
         }
 
         /* Imagem de Perfil */
