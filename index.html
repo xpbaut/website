@@ -3,123 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Site - Material You</title>
+    <title>Minha Bio</title>
 
-    <!-- Fonte Google Sans -->
-    <link href="https://fonts.googleapis.com/css2?family=Google+Sans&display=swap" rel="stylesheet">
-
+    <!-- Usando uma fonte similar à San Francisco -->
     <style>
-        /* Configurações iniciais */
         body {
-            font-family: 'Google Sans', sans-serif;
-            background-color: #e0e0e0; /* Cor de fundo cinza claro */
-            color: #212121; /* Texto escuro */
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+            background-color: #121212; /* Modo escuro */
+            color: #e0e0e0; /* Texto claro */
             margin: 0;
             padding: 0;
             text-align: center;
-            transition: background-color 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
 
-        h1 {
+        header {
             font-size: 36px;
-            color: #333333;
-            margin-top: 50px;
-            transition: color 0.3s ease;
+            color: #ffffff;
+            margin-top: 20px;
+        }
+
+        .profile-container {
+            width: 90%;
+            max-width: 500px;
+            margin-top: 30px;
+            background-color: #1e1e1e;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid #ffffff;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 28px;
+            color: #ffffff;
+            margin: 10px 0;
         }
 
         p {
             font-size: 18px;
-            color: #555555;
-            margin: 20px;
-            transition: color 0.3s ease;
+            color: #cccccc;
+            margin-bottom: 20px;
         }
 
-        /* Container principal */
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #ffffff;
-            border-radius: 12px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .container:hover {
-            transform: scale(1.02); /* Animação de leve aumento no hover */
-        }
-
-        /* Seção de links */
         .links {
-            display: flex;
-            justify-content: center;
-            margin-top: 40px;
-            gap: 20px;
-            transition: transform 0.3s ease;
+            margin-top: 20px;
         }
 
         .links a {
             text-decoration: none;
-            color: #6200ea; /* Cor primária do Material You */
-            font-size: 20px;
+            color: #6200ea; /* Cor suave */
+            font-size: 18px;
             padding: 10px 20px;
             border: 2px solid transparent;
-            border-radius: 30px;
-            background-color: #e8f0fe; /* Cor suave de fundo */
-            transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+            border-radius: 20px;
+            background-color: #3f3f3f;
+            transition: all 0.3s ease;
         }
 
         .links a:hover {
             background-color: #6200ea;
             color: #ffffff;
-            transform: scale(1.1); /* Animação de aumento no hover */
+            transform: scale(1.05);
         }
 
-        .links a:active {
-            background-color: #3700b3; /* Cor de clique */
-        }
-
-        /* Animação de Fade-In para o conteúdo */
-        .container {
-            opacity: 0;
-            animation: fadeIn 1s forwards;
-        }
-
-        @keyframes fadeIn {
-            to {
-                opacity: 1;
-            }
+        footer {
+            font-size: 14px;
+            color: #cccccc;
+            margin-top: 50px;
         }
 
         /* Responsividade */
-        @media (max-width: 768px) {
-            h1 {
+        @media (max-width: 600px) {
+            .profile-container {
+                width: 80%;
+            }
+
+            header {
                 font-size: 28px;
-            }
-
-            p {
-                font-size: 16px;
-            }
-
-            .links {
-                flex-direction: column;
-            }
-
-            .links a {
-                width: 100%;
-                text-align: center;
             }
         }
     </style>
 </head>
 <body>
 
-    <h1>Bem-vindo ao Meu Site</h1>
-    <p>Este é um site feito com o estilo do Material You, usando a fonte Google Sans e animações suaves.</p>
+    <header>Minha Bio</header>
 
-    <div class="container">
-        <p>Este é um exemplo de conteúdo em um layout limpo e moderno. Abaixo estão alguns links com animações.</p>
+    <div class="profile-container">
+        <img src="insira a foto aqui" alt="Minha Foto" class="profile-img">
+        <h2>[Seu Nome]</h2>
+        <p>Desenvolvedor, criador e entusiasta de tecnologia.</p>
 
         <div class="links">
             <a href="https://www.example.com" target="_blank">Link 1</a>
@@ -127,6 +111,8 @@
             <a href="https://www.example.com" target="_blank">Link 3</a>
         </div>
     </div>
+
+    <footer>&copy; 2025 [Seu Nome]. Todos os direitos reservados.</footer>
 
 </body>
 </html>
