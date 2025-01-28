@@ -3,137 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Perfil - Deltarune</title>
+    <title>Meu Site - Material You</title>
 
-    <!-- Usando a fonte 'Press Start 2P' (semelhante à de Undertale/Deltarune) -->
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    
+    <!-- Fonte Google Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans&display=swap" rel="stylesheet">
+
     <style>
+        /* Configurações iniciais */
         body {
-            font-family: 'Press Start 2P', cursive;
-            background-color: #000000; /* Fundo preto */
-            color: #FFFFFF; /* Texto branco */
+            font-family: 'Google Sans', sans-serif;
+            background-color: #e0e0e0; /* Cor de fundo cinza claro */
+            color: #212121; /* Texto escuro */
             margin: 0;
             padding: 0;
             text-align: center;
+            transition: background-color 0.3s ease;
         }
 
-        header {
-            background-color: #ff0000; /* Vermelho vibrante (para chamar atenção) */
-            color: #FFFFFF;
-            padding: 20px;
+        h1 {
             font-size: 36px;
-            border-bottom: 5px solid #FFFFFF;
-            text-transform: uppercase;
-        }
-
-        .profile-container {
-            background-color: #222222; /* Fundo escuro para o perfil */
-            border-radius: 10px;
-            width: 70%;
-            margin: 50px auto;
-            padding: 20px;
-            border: 2px solid #FFFFFF;
-        }
-
-        .profile-img {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            border: 3px solid #ff0000; /* Borda vermelha */
-            margin-bottom: 20px;
-        }
-
-        .profile-info h2 {
-            font-size: 28px;
-            color: #ff0000; /* Nome em vermelho */
-        }
-
-        .dialog-box {
-            background-color: #444444; /* Caixa de diálogo */
-            color: #ffffff;
-            padding: 20px;
-            margin-top: 20px;
-            border-radius: 10px;
-            width: 80%;
-            margin-left: auto;
-            margin-right: auto;
-            font-size: 18px;
-            text-align: left;
-            border: 3px solid #ff0000; /* Borda vermelha */
-        }
-
-        .social-links {
-            list-style: none;
-            padding: 0;
-            margin-top: 30px;
-        }
-
-        .social-links li {
-            margin-bottom: 15px;
-            padding: 12px;
-            background-color: #ff0000; /* Roxo para os links */
-            border: 2px solid #ffffff; /* Borda branca */
-            border-radius: 10px;
-            width: 250px;
-            margin-left: auto;
-            margin-right: auto;
-            text-align: center;
-        }
-
-        .social-links a {
-            text-decoration: none;
-            color: #ffffff;
-            font-size: 20px;
-        }
-
-        footer {
+            color: #333333;
             margin-top: 50px;
-            font-size: 14px;
-            color: #ffffff;
-            background-color: #ff0000; /* Vermelho */
-            padding: 15px;
-            border-top: 2px solid #ffffff;
+            transition: color 0.3s ease;
         }
 
-        .social-links a:hover {
-            color: #ff00d4; /* Efeito de cor ao passar o mouse */
+        p {
+            font-size: 18px;
+            color: #555555;
+            margin: 20px;
+            transition: color 0.3s ease;
+        }
+
+        /* Container principal */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .container:hover {
+            transform: scale(1.02); /* Animação de leve aumento no hover */
+        }
+
+        /* Seção de links */
+        .links {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+            gap: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .links a {
+            text-decoration: none;
+            color: #6200ea; /* Cor primária do Material You */
+            font-size: 20px;
+            padding: 10px 20px;
+            border: 2px solid transparent;
+            border-radius: 30px;
+            background-color: #e8f0fe; /* Cor suave de fundo */
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+        }
+
+        .links a:hover {
+            background-color: #6200ea;
+            color: #ffffff;
+            transform: scale(1.1); /* Animação de aumento no hover */
+        }
+
+        .links a:active {
+            background-color: #3700b3; /* Cor de clique */
+        }
+
+        /* Animação de Fade-In para o conteúdo */
+        .container {
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 28px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+            .links {
+                flex-direction: column;
+            }
+
+            .links a {
+                width: 100%;
+                text-align: center;
+            }
         }
     </style>
 </head>
 <body>
 
-    <!-- Música de fundo -->
-    <audio autoplay loop>
-        <source src="Rouxls Kaard.mp3" type="audio/mp3">
-        Seu navegador não suporta áudio.
-    </audio>
+    <h1>Bem-vindo ao Meu Site</h1>
+    <p>Este é um site feito com o estilo do Material You, usando a fonte Google Sans e animações suaves.</p>
 
-    <header>
-        Meu Perfil - Deltarune
-    </header>
+    <div class="container">
+        <p>Este é um exemplo de conteúdo em um layout limpo e moderno. Abaixo estão alguns links com animações.</p>
 
-    <div class="profile-container">
-        <img src="Picsart_25-01-28_09-23-09-830.jpg" alt="Minha Foto" class="profile-img">
-        <div class="profile-info">
-            <h2>xpbaut</h2>
-            <p>"I don't have time for this."</p> <!-- Frase de Deltarune -->
+        <div class="links">
+            <a href="https://www.example.com" target="_blank">Link 1</a>
+            <a href="https://www.example.com" target="_blank">Link 2</a>
+            <a href="https://www.example.com" target="_blank">Link 3</a>
         </div>
-
-        <div class="dialog-box">
-            <p>Esta é uma caixa de diálogo inspirada em Deltarune!</p>
-        </div>
-
-        <ul class="social-links">
-            <li><a href="cole o link aqui" target="_blank">Link 1</a></li>
-            <li><a href="cole o link aqui" target="_blank">Link 2</a></li>
-            <li><a href="cole o link aqui" target="_blank">Link 3</a></li>
-        </ul>
     </div>
-
-    <footer>
-        <p>&copy; 2025 (xpbaut). Todos os direitos reservados.</p>
-    </footer>
 
 </body>
 </html>
