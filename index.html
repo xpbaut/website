@@ -16,16 +16,31 @@
             --primary-dark: #1a73e8;
         }
 
-        /* Tema claro */
+        /* Estilo do corpo para o modo claro */
         body.light-mode {
             background-color: var(--bg-light);
             color: var(--text-light);
         }
 
-        /* Tema escuro */
+        /* Estilo do corpo para o modo escuro */
         body.dark-mode {
             background-color: var(--bg-dark);
             color: var(--text-dark);
+        }
+
+        /* Estilo do corpo para quando o sistema está no modo escuro ou claro */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: var(--bg-dark);
+                color: var(--text-dark);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            body {
+                background-color: var(--bg-light);
+                color: var(--text-light);
+            }
         }
 
         /* Fonte e estilos globais */
@@ -56,6 +71,8 @@
             justify-content: center;
             align-items: center;
             transition: all 0.3s ease;
+            max-width: 100%;
+            box-sizing: border-box;
         }
 
         /* Efeito de hover no header */
@@ -126,9 +143,9 @@
             position: fixed;
             top: 20px;
             right: 20px;
-            background-color: var(--primary-light);
-            border: none;
-            color: #fff;
+            background-color: transparent;
+            border: 2px solid var(--primary-light);
+            color: var(--primary-light);
             border-radius: 50%;
             padding: 12px;
             font-size: 20px;
@@ -139,6 +156,8 @@
 
         .theme-toggle:hover {
             transform: scale(1.1);
+            background-color: var(--primary-light);
+            color: #fff;
         }
 
         /* Responsividade */
@@ -205,6 +224,10 @@
                 toggleButton.innerHTML = '🌙'; // Ícone do modo escuro
             }
         }
+
+        // Detectando automaticamente o modo de esquema do dispositivo
+        const currentTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        document.body.classList.add(`${currentTheme}-mode`);
     </script>
 
 </body>
