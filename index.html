@@ -49,8 +49,8 @@
 
         /* Caixa de Perfil expandida */
         .profile-header {
-            width: 100%;
-            max-width: 1200px; /* Limite máximo para dispositivos maiores */
+            width: 100%; /* Agora a caixa ocupará 100% da largura da tela */
+            max-width: 100%; /* Remove o limite de largura para expandir totalmente */
             background-color: var(--border);
             border-radius: 15px;
             padding: 50px 40px;
@@ -61,6 +61,7 @@
             text-align: center;
             box-shadow: 0 4px 10px var(--shadow);
             margin-bottom: 40px;
+            position: relative; /* Para garantir que o conteúdo possa expandir */
         }
 
         .profile-header:hover {
