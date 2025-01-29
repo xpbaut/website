@@ -2,124 +2,72 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil Deltarune</title>
+    <title>Dark World Dialog</title>
     <style>
-        /* Fonte Pixelada Inspirada em Deltarune */
-        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-
-        /* Estilo Principal */
         body {
-            font-family: 'Press Start 2P', monospace;
-            background-color: #1e1e1e; /* Fundo escuro */
-            color: #ffffff; /* Texto branco */
-            margin: 0;
-            padding: 0;
+            background-color: #1a1a1a;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Courier New', monospace;
         }
 
-        /* Container Centralizado */
-        .container {
-            text-align: center;
-            width: 90%;
-            max-width: 500px;
+        .dialog-box {
+            background-color: #2d2d2d;
+            border: 4px solid #ffffff;
+            border-radius: 8px;
             padding: 20px;
-            background-color: #2e2e2e; /* Fundo mais claro para destacar o conteúdo */
-            border: 5px solid #8a00d4; /* Bordas roxas */
-            border-radius: 15px;
-            box-shadow: 0 0 20px rgba(138, 0, 212, 0.5); /* Sombra roxa */
+            color: white;
+            width: 80%;
+            max-width: 600px;
+            position: relative;
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
         }
 
-        /* Foto de Perfil */
-        .profile-pic img {
-            border-radius: 50%;
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            border: 5px solid #8a00d4; /* Borda roxa ao redor da imagem */
+        .text {
+            font-size: 1.2em;
+            line-height: 1.5;
+            margin-bottom: 20px;
         }
 
-        /* Título (Nome) */
-        .profile-info h1 {
-            color: #8a00d4; /* Título em roxo */
-            font-size: 3rem;
-            text-transform: uppercase;
-            letter-spacing: 5px;
-            margin-top: 20px;
-        }
-
-        /* Descrição */
-        .profile-info p {
-            font-size: 1.1rem;
-            color: #b0b0b0; /* Descrição em cinza claro */
-            margin-top: 10px;
-        }
-
-        /* Links */
-        .links ul {
-            list-style: none;
-            padding: 0;
-            margin-top: 20px;
-        }
-
-        .links ul li {
-            margin: 10px 0;
-        }
-
-        .links a {
-            color: #8a00d4; /* Links roxos */
-            text-decoration: none;
-            font-size: 1.5rem;
-            padding: 5px 10px;
-            border: 2px solid transparent;
-            border-radius: 5px;
-            transition: all 0.3s ease;
-        }
-
-        .links a:hover {
+        .arrow {
+            position: absolute;
+            bottom: -30px;
+            right: 20px;
+            animation: bounce 1s infinite;
             color: #ffffff;
-            background-color: #8a00d4;
-            border-color: #ffffff; /* Efeito no hover */
         }
 
-        /* Copyright */
-        .copyright p {
-            font-size: 0.9rem;
-            color: #b0b0b0;
-            margin-top: 20px;
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* Efeito de pixel art */
+        .dialog-box::after {
+            content: '';
+            position: absolute;
+            top: -8px;
+            left: -8px;
+            right: -8px;
+            bottom: -8px;
+            border: 2px solid #00ffff;
+            border-radius: 12px;
+            pointer-events: none;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Foto de Perfil -->
-        <div class="profile-pic">
-            <img src="coisas/Picsart_25-01-28_09-23-09-830.jpg" alt="Foto de Perfil"> <!-- Troque a foto -->
+    <div class="dialog-box">
+        <div class="text">
+            > VOCÊ ACESSOU O MUNDO DIGITAL!<br><br>
+            > SEU HOST É: [SEU NOME]<br><br>
+            > ESTE É SEU ESPAÇO PERSONALIZADO.<br><br>
+            > O QUE VOCÊ DESEJA CRIAR HOJE?
         </div>
-
-        <!-- Nome e Descrição -->
-        <div class="profile-info">
-            <h1>xpbaut</h1> <!-- Troque "Seu Nome" -->
-            <p>Uma breve descrição sobre você, seus interesses ou algo que você gostaria de compartilhar.</p> <!-- Troque a descrição -->
-        </div>
-
-        <!-- Links -->
-        <div class="links">
-            <ul>
-                <li><a href="https://www.exemplo1.com">Link 1</a></li> <!-- Troque o link e o texto -->
-                <li><a href="https://www.exemplo2.com">Link 2</a></li> <!-- Troque o link e o texto -->
-                <li><a href="https://www.exemplo3.com">Link 3</a></li> <!-- Troque o link e o texto -->
-                <li><a href="https://www.exemplo4.com">Link 4</a></li> <!-- Troque o link e o texto -->
-            </ul>
-        </div>
-
-        <!-- Copyright -->
-        <div class="copyright">
-            <p>&copy; 2025 xpbaut - Todos os direitos reservados.</p> <!-- Troque "Seu Nome" -->
-        </div>
+        <div class="arrow">▼</div>
     </div>
 </body>
 </html>
